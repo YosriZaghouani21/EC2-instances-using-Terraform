@@ -3,14 +3,14 @@
 ## Pre-requisites
 Make sure you have the following pre-requisites installed before proceeding:
 
-1. Install AWS CLI first on your MAC or your EC2 instance.
+1. Install AWS CLI first on your OS or your EC2 instance.
 2. Create a new access key if you don't have one. Download the keys to your local machine. 
    - Login to AWS console, click on your username, and go to My security credentials.
    - Continue to security credentials, click on access keys.
 
 ## Setup AWS Configuration
 
-Run the following command in MacOS/EC2 where you have installed Terraform:
+Run the following command in OS/EC2 where you have installed Terraform:
 
 
 aws configure
@@ -113,8 +113,9 @@ resource "aws_instance" "myFirstInstance" {
 
 ## Initialize Terraform
 Run the following command to initialize Terraform:
-
+```bash
 terraform init
+```
 
 ## Terraform Plan
 Run the following command to see how many resources will be added:
@@ -137,16 +138,14 @@ Terraform will prompt for confirmation. Enter 'yes' to proceed.
 ## Also To Destroy the instance 
 Run the following command to destroy the resources:
 
-```bash
-terraform plan
-```
 
 ```bash
 terraform destroy
 ```
-!!Be cautious when running terraform destroy as it will permanently delete the resources, and there is no way to undo this action.
 
-Terraform will then proceed to destroy the resources. Once the process is complete, you should see a message indicating that the destruction is finished.!!
+# Be cautious when running terraform destroy as it will permanently delete the resources, and there is no way to undo this action.
+
+## Terraform will then proceed to destroy the resources. Once the process is complete, you should see a message indicating that the destruction is finished.!!
 
 
 
