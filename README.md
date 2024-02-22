@@ -12,7 +12,7 @@ Make sure you have the following pre-requisites installed before proceeding:
 
 Run the following command in MacOS/EC2 where you have installed Terraform:
 
-```bash
+
 aws configure
 
 ## Setup Project Directory
@@ -22,6 +22,7 @@ cd project-terraform
 
 ## Create Terraform Variables
 
+```bash
 variable "aws_region" {
   description = "The AWS region to create things in." 
   default     = "us-east-2" 
@@ -51,9 +52,11 @@ variable "ami_id" {
   description = "AMI for Ubuntu Ec2 instance" 
   default     = "ami-0b9064170e32bde34" 
 }
+```
 
 
 ## Create Terraform Configuration
+```bash
 
 provider "aws" {
   region = var.aws_region
@@ -106,6 +109,7 @@ resource "aws_instance" "myFirstInstance" {
     Name = var.tag_name
   }
 }
+```
 
 ## Initialize Terraform
 Run the following command to initialize Terraform:
@@ -115,17 +119,34 @@ terraform init
 ## Terraform Plan
 Run the following command to see how many resources will be added:
 
-
+```bash
 terraform plan
-
+```
 
 ## Terraform Apply
 Run the following command to apply the changes:
 
-
+```bash
 terraform apply
+```
 
 Terraform will prompt for confirmation. Enter 'yes' to proceed.
+
+
+
+## Also To Destroy the instance 
+Run the following command to destroy the resources:
+
+```bash
+terraform plan
+```
+
+```bash
+terraform destroy
+```
+!!Be cautious when running terraform destroy as it will permanently delete the resources, and there is no way to undo this action.
+
+Terraform will then proceed to destroy the resources. Once the process is complete, you should see a message indicating that the destruction is finished.!!
 
 
 
