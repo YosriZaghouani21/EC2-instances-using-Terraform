@@ -12,14 +12,17 @@ Make sure you have the following pre-requisites installed before proceeding:
 
 Run the following command in OS/EC2 where you have installed Terraform:
 
+```bash
 
 aws configure
-
+```
 ## Setup Project Directory
+```bash
+
 cd ~
 mkdir project-terraform
 cd project-terraform
-
+```
 ## Create Terraform Variables
 
 ```bash
